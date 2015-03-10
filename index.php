@@ -105,6 +105,10 @@ transition: all .2s linear;
 		  url: url2,
 
 		  contentType: 'text/json',
+		  
+		  headers: {  
+		  	Access-Control-Allow-Origin: *
+		  }, 
 
 		  xhrFields: {
 		  
