@@ -95,7 +95,7 @@ transition: all .2s linear;
 		 //https://api.angel.co/1/search?query=barack&type=User
 		 var url = "https://api.angel.co/1/search?query=" + str+"&type=User";
 		 console.log(url)
-		 $.getJSON('http://anyorigin.com/get?url='+url, function(data){
+		 $.getJSON(url, function(data){
 				console.log(data);
 			});
 		 
