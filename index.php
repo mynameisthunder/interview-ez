@@ -1,9 +1,9 @@
 <html>
 <head>
 <title >D3 example ez</title>
-<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
 <style type="text/css">
 body{
