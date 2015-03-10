@@ -86,7 +86,7 @@ transition: all .2s linear;
 		}
 		else{
 			var json  = query(info);
-			populateSvg(json)
+			//populateSvg(json)
 		}
 	});
 //https://angel.co/api/oauth/token?client_id=b977571055dd8668fc96c39b5bfec3ec93211f6f03dd9ca2&client_secret=3a08f1a95ceea606c7b3775996322c7ac8dcc9e599fb2d9f&code=...& grant_type=authorization_code
