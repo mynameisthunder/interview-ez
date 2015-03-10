@@ -107,7 +107,7 @@ transition: all .2s linear;
 		  contentType: 'text/json',
 		  
 		  headers: {  
-		  	Access-Control-Allow-Origin: *
+		  	"Access-Control-Allow-Origin": "*"
 		  }, 
 
 		  xhrFields: {
