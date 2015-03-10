@@ -93,7 +93,7 @@ transition: all .2s linear;
 
 	var query = function(str) {
 		 //https://api.angel.co/1/search?query=barack&type=User
-		 var url = "https://api.angel.co/1/search?query=" + str+"&type=User"+"&client_id="+"e4a4b19626ddde7b6fadeb1851c5002215bd0b04f418e155";
+		 var url2 = "https://api.angel.co/1/search?query=" + str+"&type=User";
 		 console.log(url)
 		 $.ajax({
 
@@ -102,7 +102,7 @@ transition: all .2s linear;
 		  type: 'GET',
 
 		  // The URL to make the request to.
-		  url: 'http://updates.html5rocks.com',
+		  url: url2,
 
 		  contentType: 'text/json',
 
