@@ -93,7 +93,7 @@ transition: all .2s linear;
 
 	var query = function(str) {
 		 //https://api.angel.co/1/search?query=barack&type=User
-		 var url = "http://api.angel.co/1/search?query=" + str+"&type=User";
+		 var url = "https://api.angel.co/1/search?query=" + str+"&type=User"+"&client_id="+"e4a4b19626ddde7b6fadeb1851c5002215bd0b04f418e155";
 		 console.log(url)
 		 $.getJSON(url, function(data){
 				console.log(data);
