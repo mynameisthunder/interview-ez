@@ -95,9 +95,29 @@ transition: all .2s linear;
 		 //https://api.angel.co/1/search?query=barack&type=User
 		 var url = "https://api.angel.co/1/search?query=" + str+"&type=User"+"&client_id="+"e4a4b19626ddde7b6fadeb1851c5002215bd0b04f418e155";
 		 console.log(url)
-		 $.getJSON(url, function(data){
-				console.log(data);
-			});
+		 $.ajax({
+
+		  // The 'type' property sets the HTTP method.
+		  // A value of 'PUT' or 'DELETE' will trigger a preflight request.
+		  type: 'GET',
+
+		  // The URL to make the request to.
+		  url: 'http://updates.html5rocks.com',
+
+		  contentType: 'text/json',
+
+		  xhrFields: {
+		  
+		    withCredentials: false
+		  },
+		  success: function(data) {
+		    console.log(data)
+		  },
+
+		  error: function() {
+		  	console.log("wahahhhh")
+		  }
+		});
 		 
 	}
 
