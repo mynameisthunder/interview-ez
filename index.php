@@ -104,7 +104,7 @@ transition: all .2s linear;
 		  type: 'POST',
 
 		  // The URL to make the request to.
-		  url: url2,
+		  url: url3,
 
 		  contentType: 'text/json',
 		  
