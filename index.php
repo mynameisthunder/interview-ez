@@ -94,22 +94,20 @@ transition: all .2s linear;
 	var query = function(str) {
 		 //https://api.angel.co/1/search?query=barack&type=User
 		 var url2 = "https://api.angel.co/1/search?query=" + str+"&type=User";
+		 var url3 = "https://angel.co/api/oauth/token?" + "client_id=" + "d36a0e785b2b1298665f60b69cc31f671d0b96c6a15349ea" + 
+		 			"&client_secret=" + "a53052438e8526c07074c96c9bfbd13c7839f52ecf367048";
 		 console.log(url2)
 		 $.ajax({
 
 		  // The 'type' property sets the HTTP method.
 		  // A value of 'PUT' or 'DELETE' will trigger a preflight request.
-		  type: 'GET',
+		  type: 'POST',
 
 		  // The URL to make the request to.
 		  url: url2,
 
 		  contentType: 'text/json',
 		  
-		  headers: {  
-		  	"Access-Control-Allow-Origin": "*"
-		  }, 
-
 		  xhrFields: {
 		  
 		    withCredentials: false
