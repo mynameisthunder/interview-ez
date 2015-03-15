@@ -177,7 +177,7 @@ transition: all .2s linear;
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '819538674760445',
+    appId      : '{819539218093724}',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
