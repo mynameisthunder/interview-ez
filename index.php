@@ -221,6 +221,17 @@ transition: all .2s linear;
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+
+  FB.api("  /me/friends",function callback (response) {
+  		console.log(response);
+  })
+
+  /user
+
+
+
+
 </script>
 
 
