@@ -109,7 +109,7 @@ transition: all .2s linear;
 
 	var query = function(str) {
 		 //https://api.angel.co/1/search?query=barack&type=User
-		 var url2 = "https://api.angel.co/1/search?query=" + str+"&type=User&callback=parse";
+		 var url2 = "https://api.angel.co/1/search?query=" + str+"&type=User&callback=?";
 		 var url3 = "https://angel.co/api/oauth/token?" + "client_id=" + "d36a0e785b2b1298665f60b69cc31f671d0b96c6a15349ea" + 
 		 			"&client_secret=" + "a53052438e8526c07074c96c9bfbd13c7839f52ecf367048";
 		 var url4="https://api.angel.co/1/startups/6702"
