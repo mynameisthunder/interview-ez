@@ -114,29 +114,9 @@ transition: all .2s linear;
 		 			"&client_secret=" + "a53052438e8526c07074c96c9bfbd13c7839f52ecf367048";
 		 var url4="https://api.angel.co/1/startups/6702"
 		 console.log(url2)
-		 $.ajax({
-
-		  // The 'type' property sets the HTTP method.
-		  // A value of 'PUT' or 'DELETE' will trigger a preflight request.
-		  type: 'POST',
-
-		  // The URL to make the request to.
-		  url: url2,
-
-		  contentType: 'text/json',
-		  
-		  xhrFields: {
-		  
-		    withCredentials: false
-		  },
-		  success: function(data) {
-		    console.log(data)
-		  },
-
-		  error: function() {
-		  	console.log("wahahhhh")
-		  }
-		});
+     $.getJSON(url2, null, function(data){
+      console.log(data);
+     })
 		 
 	}
 	</script>
