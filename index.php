@@ -109,7 +109,7 @@ transition: all .2s linear;
 
 	var query = function(str) {
 		 //https://api.angel.co/1/search?query=barack&type=User
-		 var url2 = "https://api.angel.co/1/search?query=" + str+"&type=User";
+		 var url2 = "https://api.angel.co/1/search?query=" + str+"&type=User&?callback=parse";
 		 var url3 = "https://angel.co/api/oauth/token?" + "client_id=" + "d36a0e785b2b1298665f60b69cc31f671d0b96c6a15349ea" + 
 		 			"&client_secret=" + "a53052438e8526c07074c96c9bfbd13c7839f52ecf367048";
 		 var url4="https://api.angel.co/1/startups/6702"
@@ -121,7 +121,7 @@ transition: all .2s linear;
 		  type: 'POST',
 
 		  // The URL to make the request to.
-		  url: url4,
+		  url: url2,
 
 		  contentType: 'text/json',
 		  
@@ -140,7 +140,7 @@ transition: all .2s linear;
 		 
 	}
 	</script>
-
+<!--
 	<script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -238,7 +238,7 @@ transition: all .2s linear;
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
-<div id="status">
+<div id="status"> -->
 </div>
 
 
