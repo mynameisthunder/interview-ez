@@ -179,8 +179,12 @@ var parsed;
                     type: "GET",
                     url: url2,
                      success: function(d){
+                        console.log(x);
+                        console.log(obj);
                         var obj =parsed[x];
-                        obj.rating = d.imdbRating;;
+
+                        obj.rating = d.imdbRating;
+                        console.log(obj);
                        parsed[x] = obj;
                        console.log(d);
                      }
