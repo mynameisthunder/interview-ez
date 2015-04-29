@@ -151,6 +151,9 @@ function csvJSON(csv){
 }
 
 
+var parsed;
+
+
   var parseCSV = function(file){
     var toReturn=null;
      $.ajax({
@@ -161,10 +164,10 @@ function csvJSON(csv){
           
 
 
-          var parsed=  csvJSON(data);
+           parsed=  csvJSON(data);
           console.log(parsed);
           //go throgh the parsed and get everyones imdb score
-          for( var x = 0; x<100 ;x++){
+          for( var x = 0; x<40 ;x++){
          ///   http://www.omdbapi.com/?t=7+Faces+of+Dr.+Lao&y=1964&plot=short&r=json
               var url2 = "http://www.omdbapi.com/?"
               var title = parsed[x].movie, year = parsed[x].year;
