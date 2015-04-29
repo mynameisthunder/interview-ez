@@ -165,10 +165,11 @@ function csvJSON(csv){
           console.log(parsed);
           //go throgh the parsed and get everyones imdb score
           for( var x = 0; x<10 ;x++){
-         //   http://www.omdbapi.com/?t=7+Faces+of+Dr.+Lao&y=1964&plot=short&r=json
+         ///   http://www.omdbapi.com/?t=7+Faces+of+Dr.+Lao&y=1964&plot=short&r=json
               var url2 = "http://www.omdbapi.com/?"
               var title = parsed[x].movie, year = parsed[x].year;
-              url2  = url2 + "t="+title +"&y="+ year +"&r=json&callback=?"
+              url2  = url2 + "t="+title +"&y="+ year +"&r=json&callback=?";
+              console.log(url2);
                   $.ajax({
                     type: "GET",
                     url: url2,
