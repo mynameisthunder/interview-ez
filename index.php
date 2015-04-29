@@ -139,10 +139,9 @@ var csvToJSON=function(data){
 
   var parseCSV = function(file){
     var toReturn = null;
-    $.get(file, function(data){
-          console.log(data);
-          toReturn =  data;
-
+    toReturn = $.get(file, function(data){
+          console.log("here");
+         return data.responseText;
 
 
 
