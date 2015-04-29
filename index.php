@@ -119,6 +119,21 @@ transition: all .2s linear;
      })
 		 
 	}
+
+
+  var parseCSV = function(file){
+
+    $.get(file, function(data){
+          console.log(data);
+
+
+
+    });
+
+    
+  }
+
+
 	</script>
 <!--
 	<script>
