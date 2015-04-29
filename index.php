@@ -126,23 +126,31 @@ transition: all .2s linear;
  I could use a library to do it but i jsut used and article off stack overflow  to get this processData code
 */
 
-function processData(allText) {
-    var record_num = 2;  // or however many elements there are in each row
-    var allTextLines = allText.split(/\r\n|\n/);
-    var entries = allTextLines[0].split(',');
-    var lines = [];
-
-    var headings = entries.splice(0,record_num);
-    while (entries.length>0) {
-        var tarr = [];
-        for (var j=0; j<record_num; j++) {
-            tarr.push(headings[j]+":"+entries.shift());
-        }
-        lines.push(tarr);
+//var csv is the CSV file with headers
+function csvJSON(csv){
+ 
+  var lines=csv.split("\n");
+ 
+  var result = [];
+ 
+  var headers=lines[0].split(",");
+ 
+  for(var i=1;i<lines.length;i++){
+ 
+    var obj = {};
+    var currentline=lines[i].split(",");
+ 
+    for(var j=0;j<headers.length;j++){
+      obj[headers[j]] = currentline[j];
     }
-    // alert(lines);
-    console.log(lines);
-    return lines;
+ 
+    result.push(obj);
+ 
+  }
+  
+  console.log(result);
+  //return result; //JavaScript object
+  return JSON.stringify(result); //JSON
 }
 
 
@@ -156,7 +164,7 @@ function processData(allText) {
           
 
 
-          var parsed=  processData(data);
+          var parsed=  csvJSON(data);
 
 
 
