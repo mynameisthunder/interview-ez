@@ -151,7 +151,7 @@ function processData(allText) {
         url: file,
        
         success: function(data) {
-          console.log(data;)
+          console.log(data);
           return processData(data);}
      });
 
