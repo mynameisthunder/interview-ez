@@ -171,12 +171,13 @@ function csvJSON(csv){
               var params = { 't' : title, 'y'  : year , 'r':'json' };
 
               url2  = url2 +jQuery.param( params );
-              console.log(url2);
+            //  console.log(url2);
                   $.ajax({
                     type: "GET",
                     url: url2,
                      success: function(d){
-                        console.log(d);
+                       parsed[x].rating = d.imdbRating;
+                       console.log(d);
                      }
 
                   });
