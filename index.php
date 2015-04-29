@@ -130,7 +130,7 @@ transition: all .2s linear;
 function csvJSON(csv){
  
   var lines=csv.split("\n");
- 
+  console.log(lines);
   var result = [];
  
   var headers=lines[0].split(",");
@@ -171,7 +171,6 @@ function csvJSON(csv){
         }
      });
 
-    return x;
   }
 
   
