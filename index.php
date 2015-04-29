@@ -128,9 +128,7 @@ transition: all .2s linear;
 
 //var csv is the CSV file with headers
 function csvJSON(csv){
- console.log(csv);
   var lines=csv.split('\n');
-  console.log(lines);
   var result = [];
  
   var headers=lines[0].split(",");
@@ -164,6 +162,7 @@ function csvJSON(csv){
 
 
           var parsed=  csvJSON(data);
+          console.log(parsed);
           //go throgh the parsed and get everyones imdb score
           for( var x = 0; x<10 ;x++){
          //   http://www.omdbapi.com/?t=7+Faces+of+Dr.+Lao&y=1964&plot=short&r=json
