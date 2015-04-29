@@ -182,7 +182,7 @@ function csvJSON(csv){
 
 
         }//end of for loop
-     };
+     }
 
   });
 
