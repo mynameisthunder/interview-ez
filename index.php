@@ -121,35 +121,44 @@ transition: all .2s linear;
 	}
 
 
-var csvToJSON=function(data){
 
-  var jsonObj = [];
-  var headers = data[0].split(',');
-  for(var i = 1; i < data.length; i++) {
-    var data = arr[i].split(',');
-    var obj = {};
-    for(var j = 0; j < data.length; j++) {
-       obj[headers[j].trim()] = data[j].trim();
+/*
+ I could use a library to do it but i jsut used and article off stack overflow  to get this processData code
+*/
+
+function processData(allText) {
+    var record_num = 5;  // or however many elements there are in each row
+    var allTextLines = allText.split(/\r\n|\n/);
+    var entries = allTextLines[0].split(',');
+    var lines = [];
+
+    var headings = entries.splice(0,record_num);
+    while (entries.length>0) {
+        var tarr = [];
+        for (var j=0; j<record_num; j++) {
+            tarr.push(headings[j]+":"+entries.shift());
+        }
+        lines.push(tarr);
     }
-    jsonObj.push(obj);
-  }
-  return jsonObj;
-
+    // alert(lines);
 }
 
+
   var parseCSV = function(file){
-    var toReturn = null;
-    toReturn = $.get(file, function(data){
-          console.log("here");
-         return data.responseText;
+    var toReturn=null;
+   $.ajax({
+        type: "GET",
+        url: file,
+       
+        success: function(data) {
+          console.log(data;)
+          return processData(data);}
+     });
 
-
-
-    });
-    return toReturn;
 
   }
 
+  
 
 	</script>
 <!--
