@@ -127,7 +127,7 @@ transition: all .2s linear;
 */
 
 function processData(allText) {
-    var record_num = 5;  // or however many elements there are in each row
+    var record_num = 2;  // or however many elements there are in each row
     var allTextLines = allText.split(/\r\n|\n/);
     var entries = allTextLines[0].split(',');
     var lines = [];
@@ -148,15 +148,22 @@ function processData(allText) {
 
   var parseCSV = function(file){
     var toReturn=null;
-   $.ajax({
+     $.ajax({
         type: "GET",
         url: file,
        
         success: function(data) {
-          return processData(data);}
+          
+
+
+          var parsed=  processData(data);
+
+
+
+        }
      });
 
-
+    return x;
   }
 
   
