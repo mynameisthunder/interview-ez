@@ -121,16 +121,33 @@ transition: all .2s linear;
 	}
 
 
+var csvToJSON=function(data){
+
+  var jsonObj = [];
+  var headers = data[0].split(',');
+  for(var i = 1; i < data.length; i++) {
+    var data = arr[i].split(',');
+    var obj = {};
+    for(var j = 0; j < data.length; j++) {
+       obj[headers[j].trim()] = data[j].trim();
+    }
+    jsonObj.push(obj);
+  }
+  return jsonObj;
+
+}
+
   var parseCSV = function(file){
 
     $.get(file, function(data){
-          console.log(data);
+      return data;
+
 
 
 
     });
 
-    
+
   }
 
 
