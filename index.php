@@ -138,15 +138,16 @@ var csvToJSON=function(data){
 }
 
   var parseCSV = function(file){
-
+    var toReturn = null;
     $.get(file, function(data){
-      return data;
+          console.log(data);
+          toReturn =  data;
 
 
 
 
     });
-
+    return toReturn;
 
   }
 
