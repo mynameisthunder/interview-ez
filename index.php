@@ -153,6 +153,24 @@ function csvJSON(csv){
 
 var parsed;
 
+var omdbapiCall=function (url2, index) {
+  // body...
+
+   console.log(url2);
+                  $.ajax({
+                    type: "GET",
+                    url: url2,
+                     success: function(d){
+                        console.log(index);
+                        var obj =parsed[index];
+                        obj.rating = d.imdbRating;
+                        console.log(obj);
+                       parsed[x] = obj;
+                       console.log(d);
+                     }
+
+                  });
+}
 
   var parseCSV = function(file){
     var toReturn=null;
@@ -172,27 +190,15 @@ var parsed;
               var url2 = "http://www.omdbapi.com/?"
               var title = parsed[x].movie, year = parsed[x].year;
               var params = { 't' : title, 'y'  : year , 'r':'json' };
-              var index = x;
               url2  = url2 +jQuery.param( params );
-            //  console.log(url2);
-                  $.ajax({
-                    type: "GET",
-                    url: url2,
-                     success: function(d){
-                        console.log(index);
-                        var obj =parsed[index];
-                        obj.rating = d.imdbRating;
-                        console.log(obj);
-                       parsed[x] = obj;
-                       console.log(d);
-                     }
+              omdbapiCall(url2, x);
 
-                  });
+            // 
 
 
 
-        }//end of for loop
-     }
+          }//end of for loop
+       }
 
   });
 
