@@ -172,7 +172,7 @@ function csvJSON(csv){
               url  = url + "t="+title +"&y="+ year +"&r=json&callback=?"
                   $.ajax({
                     type: "GET",
-                    url: ,
+                    url: url,
                      success: function(d){
                         console.log(d);
                      }
