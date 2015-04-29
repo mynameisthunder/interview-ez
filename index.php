@@ -148,9 +148,8 @@ function csvJSON(csv){
  
   }
   
-  console.log(result);
   //return result; //JavaScript object
-  return JSON.stringify(result); //JSON
+  return result; //JSON
 }
 
 
@@ -165,10 +164,24 @@ function csvJSON(csv){
 
 
           var parsed=  csvJSON(data);
+          //go throgh the parsed and get everyones imdb score
+          for( var x = 0; x<10 ;x++){
+         //   http://www.omdbapi.com/?t=7+Faces+of+Dr.+Lao&y=1964&plot=short&r=json
+              var url = "http://www.omdbapi.com/?"
+              var title = parsed[x].movie, year = parsed[x].year;
+              url  = url + "t="+title +"&y="+ year +"&r=json&callback=?"
+                  $.ajax({
+                    type: "GET",
+                    url: ,
+                     success: function(d){
+                        console.log(d);
+                     }
+
+                  });
 
 
 
-        }
+        }//end of for loop
      });
 
   }
