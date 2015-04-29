@@ -168,7 +168,9 @@ function csvJSON(csv){
          ///   http://www.omdbapi.com/?t=7+Faces+of+Dr.+Lao&y=1964&plot=short&r=json
               var url2 = "http://www.omdbapi.com/?"
               var title = parsed[x].movie, year = parsed[x].year;
-              url2  = url2 + "t="+title +"&y="+ year +"&r=json&callback=?";
+              var params = { 't' : title, 'y'  : year , 'r':'json' , 'callback':'?'};
+
+              url2  = url2 +jQuery.param( params );
               console.log(url2);
                   $.ajax({
                     type: "GET",
