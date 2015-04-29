@@ -172,17 +172,15 @@ var parsed;
               var url2 = "http://www.omdbapi.com/?"
               var title = parsed[x].movie, year = parsed[x].year;
               var params = { 't' : title, 'y'  : year , 'r':'json' };
-
+              var index = x;
               url2  = url2 +jQuery.param( params );
             //  console.log(url2);
                   $.ajax({
                     type: "GET",
                     url: url2,
                      success: function(d){
-                        console.log(x);
-                        console.log(obj);
-                        var obj =parsed[x];
-
+                        console.log(index);
+                        var obj =parsed[index];
                         obj.rating = d.imdbRating;
                         console.log(obj);
                        parsed[x] = obj;
